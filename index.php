@@ -86,7 +86,7 @@
         </div>
     </header>
 
-    <!-- About Section -->
+    <!-- Acerca de -->
     <section id="about" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
@@ -98,7 +98,7 @@
         </div>
     </section>
 
-    <!-- Download Section -->
+    <!-- Estacionate -->
     <section id="download" class="content-section text-center">
         <div class="download-section">
             <div class="container">
@@ -172,19 +172,20 @@
                     <!-- End | Lost Password Form -->
 
                     <!-- Begin | Register Form -->
-                    <form id="register-form" style="display:none;">
+                    <form id="register-form" action="register.php" method="POST" style="display:none;">
             		      <div class="modal-body">
 		    				        <div id="div-register-msg">
                           <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
                             <span id="text-register-msg">Registrar nueva cuenta.</span>
                         </div>
-		    				        <input id="register_username" class="form-control" type="text" placeholder="Usuario" required>
-                        <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                        <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+		    				        <input name="register_username" class="form-control" type="text" placeholder="Usuario" required>
+                        <input name="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                        <input name="register_password" class="form-control" type="password" placeholder="Contraseña" required>
+                        <input name="register_rpassword" class="form-control" type="password" placeholder="Repetir Contraseña" required>
             			    </div>
 		    		          <div class="modal-footer">
                         <div>
-                          <button type="submit" class="btn btn-default btn-lg btn-block">Registrarse</button>
+                          <button type="submit" name="submit" class="btn btn-default btn-lg btn-block">Registrarse</button>
                         </div>
                         <div>
                           <button id="register_login_btn" type="button" class="btn btn-link">Ingresar</button>
@@ -192,6 +193,11 @@
                         </div>
 		    		          </div>
                     </form>
+                    <?php
+                      if(isset($_POST['submit'])) {
+                        require("register.php");
+                      }
+                     ?>
                     <!-- End | Register Form -->
 
                   </div>
