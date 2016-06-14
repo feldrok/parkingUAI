@@ -94,7 +94,7 @@
         </form>
         <?php
           if(isset($_POST['submit'])) {
-            require("register.php");
+            require("verifyregister.php");
           }
          ?>
       </div>

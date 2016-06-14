@@ -104,7 +104,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Estacionate con parkingUAI</h2>
                     <p>Ingresa a la página de estacionamientos y no pierdas más tiempo.</p>
-                    <a href="register2.php" class="btn btn-default btn-lg" role="button">Estacionate!</a>
+                    <a href="entrar.php" class="btn btn-default btn-lg" role="button">Estacionate!</a>
                 </div>
             </div>
     </section>
