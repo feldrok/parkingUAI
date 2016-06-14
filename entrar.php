@@ -61,7 +61,6 @@
       </div>
       <!-- /.container -->
   </nav>
-
   <header class="intro">
       <div class="intro-body">
           <div class="container">
@@ -70,7 +69,6 @@
                     <h1>Entra a parking UAI</h1>
                     <form method="REQUEST" action=""/><p/>
                       <input type="name" name="username" placeholder="Usuario" required="required" /><p/>
-                      <input type="name" name="email" placeholder="Email" required="required" /><p/>
                       <input type="password" name="password" placeholder="Password" required="required" /><p/>
                       <button type="submit" name="submit" class="btn btn-default btn-lg">Entrar</button>
                     </form>
@@ -79,6 +77,7 @@
           </div>
       </div>
   </header>
+
 
 
   <section id="register" class="container content-section text-center">
