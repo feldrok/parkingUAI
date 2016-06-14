@@ -1,8 +1,8 @@
 <?php
-  $username = $_POST['register_username'];
-  $email = $_POST['register_email'];
-  $password = $_POST['register_password'];
-  $rpassword = $_POST['register_rpassword']
+  $username = $_POST['username'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $rpassword = $_POST['rpassword'];
   $reqlen = strlen($username) * strlen($email) * strlen($password) * strlen($rpassword);
 
   if ($reqlen > 0) {
