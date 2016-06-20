@@ -1,6 +1,6 @@
 <?php
-  $link = mysql_connect("localhost", "antheacl", "villarrica2016");
+  $link = mysql_connect("localhost", "root", "");
   if ($link) {
-    mysql_select_db("antheacl_parkinguai", $link);
+    mysql_select_db("parkinguai", $link);
   }
  ?>

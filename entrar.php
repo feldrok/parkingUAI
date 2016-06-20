@@ -42,10 +42,60 @@
               </a>
           </div>
 
+          <?php
+            session_start();
+          ?>
+
+          <?php require_once("connect_db.php"); ?>
+
+          <?php
+
+            if(isset($_SESSION["session_username"])){
+            // echo "Session is set"; // for testing purposes
+            header("Location: estacionate.php");
+            }
+
+            if(isset($_POST["login"])){
+
+            if(!empty($_POST['username']) && !empty($_POST['password'])) {
+             $username=$_POST['username'];
+             $password=$_POST['password'];
+
+            $query =mysql_query("SELECT * FROM usertbl WHERE username='".$username."' AND password='".$password."'");
+
+            $numrows=mysql_num_rows($query);
+             if($numrows!=0)
+
+            {
+             while($row=mysql_fetch_assoc($query))
+             {
+             $dbusername=$row['username'];
+             $dbpassword=$row['password'];
+             }
+
+            if($username == $dbusername && $password == $dbpassword)
+
+            {
+
+             $_SESSION['session_username']=$username;
+
+            /* Redirect browser */
+             header("Location: intropage.php");
+             }
+             } else {
+
+            $message = "Nombre de usuario ó contraseña invalida!";
+             }
+
+            } else {
+             $message = "Todos los campos son requeridos!";
+            }
+            }
+          ?>
 
           <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
               <ul class="nav navbar-nav">
-
+                <form name="loginform" id="loginform" action="" method="POST">
                   <li class="hidden">
                       <a href="#page-top"></a>
                   </li>
@@ -55,6 +105,7 @@
                   <li>
                       <a class="page-scroll" href="#register">Registrarme</a>
                   </li>
+                </form>
               </ul>
           </div>
           <!-- /.navbar-collapse -->
