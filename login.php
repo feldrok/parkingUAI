@@ -17,8 +17,8 @@
       header("location: estacionate.php");
     }
     else {
+      $_SESSION['error_message']="Usuario o Contraseña Incorrecto";
       header("Location:entrar.php");
-      
     }
   }
 ?>

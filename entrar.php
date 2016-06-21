@@ -70,6 +70,13 @@
                       <input type="password" id="password" name="password" placeholder="Password" required="required" /><p/>
                       <button type="submit" class="btn btn-default btn-lg">Entrar</button>
                     </form>
+                    <?php
+                      session_start();
+                      if (isset($_SESSION['error_message'])) {
+                        echo $_SESSION['error_message'];
+                        unset($_SESSION['error_message']);
+                      }
+                     ?>
                   </div>
               </div>
           </div>
