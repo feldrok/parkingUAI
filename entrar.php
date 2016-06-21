@@ -1,3 +1,13 @@
+<?php
+  include("connect_db_login.php");
+  $cookie_name = "loggedin";
+  //session_start();
+  if (isset($_COOKIE[$cookie_name])) {
+    $cookie_value = $_COOKIE[$cookie_name];
+    header("Location: estacionate.php");
+}
+?>
+
 <html lang="en">
 
 <head>
@@ -64,14 +74,13 @@
           <div class="container">
               <div class="row">
                   <div class="col-md-8 col-md-offset-2">
-                    <h1>Entra a parking UAI</h1>
-                    <form role="form" name="login" action="login.php" method="POST"><p/>
+                    <h1 class="transparentback">Entra a parking UAI</h1>
+                    <form role="form" name="login" action="connect_db_login.php" method="POST"><p/>
                       <input type="text" id="username" name="username" placeholder="Usuario" required="required" /><p/>
                       <input type="password" id="password" name="password" placeholder="Password" required="required" /><p/>
                       <button type="submit" class="btn btn-default btn-lg">Entrar</button>
                     </form>
                     <?php
-                      session_start();
                       if (isset($_SESSION['error_message'])) {
                         echo $_SESSION['error_message'];
                         unset($_SESSION['error_message']);
@@ -98,7 +107,7 @@
         </form>
         <?php
           if(isset($_POST['submit'])) {
-            require("verifyregister.php");
+            require("connect_db_register.php");
           }
          ?>
       </div>

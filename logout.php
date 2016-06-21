@@ -1,7 +1,4 @@
 <?php
-  session_start();
-  if(session_destroy())
-  {
-    header("Location: entrar.php");
-  }
+  setcookie("loggedin", "val", time() - 120, "/");
+  header("Location: entrar.php");
 ?>

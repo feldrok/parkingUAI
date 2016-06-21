@@ -53,10 +53,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">Acerca de</a>
+                        <a class="page-scroll" href="#download">Estacionate</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Estacionate</a>
+                        <a class="page-scroll" href="#about">Acerca de</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contacto</a>
@@ -74,9 +74,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">parking UAI</h1>
-                        <p class="intro-text">Te invitamos a ahorrar tu tiempo y el de los demás.<br>Encuentra tu estacionamiento en solo 30 segundos.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
+                        <h1 class="brand-heading transparentback">parking UAI</h1>
+                        <p class="intro-text transparentback">Te invitamos a ahorrar tu tiempo y el de los demás.<br>Encuentra tu estacionamiento en solo 30 segundos.</p>
+                        <a href="#download" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
                     </div>
@@ -85,26 +85,26 @@
         </div>
     </header>
 
-    <!-- Acerca de -->
-    <section id="about" class="container content-section text-center">
+    <!-- Estacionate -->
+    <section id="download" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Acerca de nosotros</h2>
-                <p>¿Aburrido de perder tiempo buscando estacionamiento?.</p>
-                <p>Como parkingUAI valoramos tu tiempo, es por esto que traemos la solución a la palma de tu mano. Un proyecto desarrollado por un grupo de estudiantes de la UAI,
-                 para solucionar un problema cotidiano en que todos nos vemos inmersos.</p>
+                <h2>Estacionate con parkingUAI</h2>
+                <p>Ingresa a la página de estacionamientos y no pierdas más tiempo.</p>
+                <a href="entrar.php" class="btn btn-default btn-lg" role="button">Estacionate!</a>
             </div>
         </div>
     </section>
 
-    <!-- Estacionate -->
-    <section id="download" class="content-section text-center">
+    <!-- Acerca de -->
+    <section id="about" class="content-section text-center">
         <div class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Estacionate con parkingUAI</h2>
-                    <p>Ingresa a la página de estacionamientos y no pierdas más tiempo.</p>
-                    <a href="entrar.php" class="btn btn-default btn-lg" role="button">Estacionate!</a>
+                  <h2>Acerca de nosotros</h2>
+                  <p>¿Aburrido de perder tiempo buscando estacionamiento?.</p>
+                  <p>Como parkingUAI valoramos tu tiempo, es por esto que traemos la solución a la palma de tu mano. Un proyecto desarrollado por un grupo de estudiantes de la UAI,
+                   para solucionar un problema cotidiano en que todos nos vemos inmersos.</p>
                 </div>
             </div>
     </section>

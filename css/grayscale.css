@@ -162,6 +162,7 @@ a:focus {
 
 .intro .intro-body .brand-heading {
     font-size: 40px;
+    color: "black";
 }
 
 .intro .intro-body .intro-text {
@@ -176,11 +177,16 @@ a:focus {
 
     .intro .intro-body .brand-heading {
         font-size: 100px;
+        color: "black";
     }
 
     .intro .intro-body .intro-text {
         font-size: 26px;
     }
+}
+
+.transparentback{
+background: rgba(0, 0, 0, 0.5);
 }
 
 .btn-circle {
@@ -309,11 +315,21 @@ a:focus {
     color: #42dca3;
     background-color: transparent;
 }
+.btn-default2 {
+    border: 1px solid #42dca3;
+    color: #000000;
+    background-color: #42dca3;
+}
 
 .btn-pressed {
   border: 1px solid #FF0000;
   color: #FF0000;
   background-color: transparent;
+}
+.btn-pressed2 {
+  border: 1px solid #FF0000;
+  color: #000000;
+  background-color: #FF0000;
 }
 
 .btn-default:hover,
@@ -387,4 +403,9 @@ body {
 
 input, select, textarea{
     color: #000000;
+}
+
+input::selection {
+  background: #000000;
+  color: white;
 }

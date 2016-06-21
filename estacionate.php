@@ -1,7 +1,9 @@
 <?php
-  session_start();
-  if(!isset($_SESSION['username'])){
-    header("Location: entrar.php");
+  include("connect_db_login.php");
+  $cookie_name = "loggedin";
+  //session_start();
+  if (isset($_COOKIE[$cookie_name])) {
+    $cookie_value = $_COOKIE[$cookie_name];
 }
 ?>
 
@@ -53,6 +55,9 @@
                          <a href="#page-top"></a>
                      </li>
                      <li>
+                         <a class="page-scroll" href="estacionate.php">Hola, <?php echo $_COOKIE[$cookie_name]; ?></a>
+                     </li>
+                     <li>
                          <a class="page-scroll" href="logout.php">Salir</a>
                      </li>
                  </ul>
@@ -67,11 +72,27 @@
              <div class="container">
                  <div class="row">
                      <div class="col-md-8 col-md-offset-2">
+                       <button id="estacionamiento" value="1" onclick="cambiarColor.call(this)" onclick="cambiarEstado()" class="btn btn-default2 btn-md">A01</button>
+                       <button id="estacionamiento" onclick="cambiarColor.call(this)" class="btn btn-default2 btn-md">A02</button>
 
                      </div>
                  </div>
              </div>
          </div>
+
+
+         <script>
+          function cambiarColor() {
+            alert("asdf");
+            $(this).toggleClass("btn-pressed2");
+          }
+          <?php
+           function cambiarEstado() {
+             $resultadores = reservar($_SESSION['username'], document.getElementById('$id_estacionamiento').value);
+           }
+          ?>
+         </script>
+
      </header>
 
       <footer>
