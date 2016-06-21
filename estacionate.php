@@ -83,7 +83,7 @@
 
          <script>
           function cambiarColor() {
-            alert("asdf");
+            alert("Mensaje de Prueba");
             $(this).toggleClass("btn-pressed2");
           }
           <?php
