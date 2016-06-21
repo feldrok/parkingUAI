@@ -1,6 +1,8 @@
-<?php
-  $link = mysql_connect("localhost", "root", "");
-  if ($link) {
-    mysql_select_db("parkinguai", $link);
-  }
- ?>
+
+  <?php
+  $host = 'localhost';
+  $dbusername = 'root';
+  $dbpassword = '';
+  $database = 'parkinguai';
+  $connect_db = mysqli_connect($host,$dbusername,$dbpassword,$database);
+?>

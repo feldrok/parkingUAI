@@ -1,3 +1,10 @@
+<?php
+  session_start();
+  if(!isset($_SESSION['username'])){
+    header("Location: entrar.php");
+}
+?>
+
 <html>
 
    <head>
@@ -29,53 +36,38 @@
    </head>
 
    <body>
+     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+         <div class="container">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                     <i class="fa fa-bars"></i>
+                 </button>
+                 <a class="navbar-brand page-scroll" href="index.php">
+                     <i class="fa fa-play-circle"></i>  <span class="light">parking</span> UAI
+                 </a>
+             </div>
+
+             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                 <ul class="nav navbar-nav">
+                     <li class="hidden">
+                         <a href="#page-top"></a>
+                     </li>
+                     <li>
+                         <a class="page-scroll" href="logout.php">Salir</a>
+                     </li>
+                 </ul>
+             </div>
+             <!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container -->
+     </nav>
+
      <header class="intro">
          <div class="intro-body">
              <div class="container">
                  <div class="row">
                      <div class="col-md-8 col-md-offset-2">
-                       <table>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A01</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B02</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A03</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B04</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A05</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B06</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A07</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B08</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A09</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B10</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A11</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B12</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A13</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B14</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A15</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B16</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A17</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B18</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A19</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B20</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A21</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B22</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A23</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B24</a><tr>
-                        </td><p/>
-                        <td>
-                          <tr><a href="" class="btn btn-default btn-md" role="button">A25</a><tr> <tr><a href="" class="btn btn-default btn-md" role="button">B26</a><tr>
-                        </td><p/>
 
-                       </table>
                      </div>
                  </div>
              </div>
